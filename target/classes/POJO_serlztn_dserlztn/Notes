@@ -1,0 +1,6 @@
+Serialization --> Pass the request body through Java code which will be addressed as a Json at Rest Assured using serialization.
+De-Serialization --> Get the Json response and convert it to Java code using Rest Assured.
+
+to implement we need following libraries
+
+Jackson(Core, Databind, Annotations), Gson, 

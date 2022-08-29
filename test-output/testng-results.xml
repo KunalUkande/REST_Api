@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-04T17:46:31 IST" name="Default suite" finished-at="2022-08-04T17:46:33 IST" duration-ms="1478">
+    <groups>
+    </groups>
+    <test started-at="2022-08-04T17:46:31 IST" name="Default test" finished-at="2022-08-04T17:46:33 IST" duration-ms="1478">
+      <class name="jira_API.Jira_API">
+        <test-method signature="create_SessionID()[pri:0, instance:jira_API.Jira_API@10d307f1]" started-at="2022-08-04T17:46:31 IST" name="create_SessionID" finished-at="2022-08-04T17:46:33 IST" duration-ms="1442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_SessionID -->
+      </class> <!-- jira_API.Jira_API -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
