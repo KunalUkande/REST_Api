@@ -28,13 +28,15 @@ public class Basics_restAPIs {
 // Problem Statement - Add Place >> Get Place Id as string to be reusable >> update address >> get place ID >> validate whether address is updated or not
 
 		// Add Place
+		
+		//Users/kunalukande/Desktop/Eclipse/
 
 		// Give Base URI
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 
 		// Provide details to add place and extract teh response as string
 		String response = given().log().all().queryParam("key", "qaclick123").header("content-type", "application/json")
-				.body(new String(Files.readAllBytes(Paths.get("C:\\Users\\kunal\\Downloads\\addPlace.json")))).when().post("/maps/api/place/add/json").then().assertThat().statusCode(200)
+				.body(new String(Files.readAllBytes(Paths.get("addPlace.json")))).when().post("/maps/api/place/add/json").then().assertThat().statusCode(200)
 				.body("scope", equalTo("APP")).header("Server", "Apache/2.4.41 (Ubuntu)").extract().response()
 				.asString();
 

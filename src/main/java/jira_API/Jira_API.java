@@ -27,7 +27,7 @@ public class Jira_API {
 		SessionFilter session = new SessionFilter();
 
 		given().relaxedHTTPSValidation().log().all().header("Content-Type", "application/json").body(new String(Files.readAllBytes(Paths.get(
-				"E:\\Eclipse-Workspace\\com.restapi_automation\\src\\main\\java\\jira_API\\createSession_Body.json"))))
+				"createSession_Body.json"))))
 				.filter(session).when().post("rest/auth/1/session").then().log().all().assertThat().statusCode(200);
 
 		// Add Comment
@@ -35,7 +35,7 @@ public class Jira_API {
 		String addComment_response = given().log().all().pathParam("key", "RSA-3")
 				.header("Content-Type", "application/json")
 				.body(new String(Files.readAllBytes(Paths.get(
-						"E:\\Eclipse-Workspace\\com.restapi_automation\\src\\main\\java\\jira_API\\addComment_Body.json"))))
+						"addComment_Body.json"))))
 				.filter(session).when().post("rest/api/2/issue/{key}/comment").then().log().all().assertThat()
 				.statusCode(201).extract().response().asString();
 
@@ -50,7 +50,7 @@ public class Jira_API {
 		given().log().all().header("X-Atlassian-Token", "no-check").header("Content-Type", "multipart/form-data")
 				.filter(session).pathParam("key", "RSA-3")
 				.multiPart("file", new File(
-						"E:\\Eclipse-Workspace\\com.restapi_automation\\src\\main\\java\\jira_API\\SampleAttachment.txt"))
+						"SampleAttachment.txt"))
 				.when().post("rest/api/2/issue/{key}/attachments").then().log().all().assertThat().statusCode(200);
 
 		// Get Issue Details

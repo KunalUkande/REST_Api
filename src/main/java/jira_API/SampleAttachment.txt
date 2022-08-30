@@ -1,2 +1,0 @@
-Hello All,
-THis is Sample attachment for Bug RSA-3.

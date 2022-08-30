@@ -55,7 +55,7 @@ public class E2E_Flow {
 				.param("productSubCategory", "SmartPhone").param("productPrice", "300")
 				.param("productDescription", "iPhone 4s").param("productFor", "UniSex")
 				.multiPart("productImage", new File(
-						"E:\\Eclipse-Workspace\\com.restapi_automation\\src\\main\\java\\ECommerce\\iPhone.jpg"));
+						"iPhone.jpg"));
 
 		String createProduct_Response = createProduct_Given.when().post("/api/ecom/product/add-product").then()
 				.spec(product_resSpec).log().all().extract().response().asString();
