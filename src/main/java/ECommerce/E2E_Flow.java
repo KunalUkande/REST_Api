@@ -35,9 +35,6 @@ public class E2E_Flow {
 		String token = loginResponse.getToken();
 		String userID = loginResponse.getUserId();
 
-		System.out.println(
-				"**********************************************************************************************************************");
-
 		/*
 		 * JsonPath login_JP= new JsonPath(login_Response); String token =
 		 * login_JP.get("token"); String userID = login_JP.get("userId")
@@ -64,8 +61,6 @@ public class E2E_Flow {
 
 		String productID = createProductJP.getString("productId");
 
-		System.out.println(
-				"**********************************************************************************************************************");
 
 // PlaceOrder
 
@@ -93,8 +88,6 @@ public class E2E_Flow {
 			orderID = orderID_List.get(i);
 		}
 
-		System.out.println(
-				"**********************************************************************************************************************");
 
 // View Order Details
 
@@ -104,8 +97,6 @@ public class E2E_Flow {
 		System.out.println("Success Message : " + orderDetails.getMessage());
 		System.out.println(orderDetails.getData().getProductImage());
 
-		System.out.println(
-				"**********************************************************************************************************************");
 
 // Delete Order
 
@@ -115,8 +106,6 @@ public class E2E_Flow {
 				.extract().response().asString();
 		System.out.println(deleteOrderResponse);
 
-		System.out.println(
-				"**********************************************************************************************************************");
 		
 		// Delete Product
 
